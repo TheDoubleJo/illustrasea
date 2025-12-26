@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:illustrasea.com)",
+      "Bash(mkdir:*)",
+      "Bash(curl:*)",
+      "Bash(dir:*)",
+      "Bash(tree:*)",
+      "WebFetch(domain:localhost)"
+    ]
+  }
+}
