@@ -1,0 +1,41 @@
+name: Fix Image Paths
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_data/*.json'
+
+jobs:
+  fix-paths:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fix image paths in JSON files
+        run: |
+          # Fix paths in all JSON files in _data directory
+          find _data -name "*.json" -type f -exec sed -i 's|"/assets/|"assets/|g' {} +
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add _data/*.json
+          git commit -m "Fix image paths: remove leading slashes [skip ci]"
+          git push

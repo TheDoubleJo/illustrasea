@@ -35,7 +35,9 @@ function renderGallery(galleryId, images) {
     images.forEach(image => {
         const div = document.createElement('div');
         div.className = 'gallery-item';
-        div.innerHTML = `<img src="${image.image}" alt="${image.alt}" loading="lazy">`;
+        // Fix image path: remove leading slash if present
+        const imagePath = image.image.startsWith('/') ? image.image.substring(1) : image.image;
+        div.innerHTML = `<img src="${imagePath}" alt="${image.alt}" loading="lazy">`;
         gallery.appendChild(div);
     });
 }
