@@ -1,11 +1,11 @@
 {
   "images": [
     {
-      "image": "/assets/images/IMG_0229 (Petite).png",
+      "image": "assets/images/IMG_0229 (Petite).png",
       "alt": "Noupa 1"
     },
     {
-      "image": "/assets/images/IMG_0230 (Petite).png",
+      "image": "assets/images/IMG_0230 (Petite).png",
       "alt": "Noupa 2"
     }
   ]

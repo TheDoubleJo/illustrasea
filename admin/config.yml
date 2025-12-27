@@ -6,6 +6,9 @@ backend:
 # Dossier où seront stockées les images uploadées
 media_folder: "assets/images"
 public_folder: "assets/images"
+# Force relative paths (no leading slash)
+site_url: ""
+base_url: ""
 
 # Collections éditables
 collections:
