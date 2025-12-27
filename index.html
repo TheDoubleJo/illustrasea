@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Irina Dufaud - Illustratrice - Mon univers artistique est tissé de plusieurs cultures. J'aime raconter des histoires à travers mes illustrations et donner vie à des personnages imaginaires.">
-    <title>Irina Dufaud - Illustratrice</title>
+    <meta name="description" content="Irina Dufaud - Illustrator - My artistic universe is woven from multiple cultures. I enjoy telling stories through my illustrations and bringing imaginary characters to life.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://illustrasea.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://illustrasea.com/">
+    <meta property="og:title" content="Irina Dufaud - Illustrator">
+    <meta property="og:description" content="My artistic universe is woven from multiple cultures. I enjoy telling stories through my illustrations and bringing imaginary characters to life.">
+    <meta property="og:image" content="https://illustrasea.com/assets/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://illustrasea.com/">
+    <meta property="twitter:title" content="Irina Dufaud - Illustrator">
+    <meta property="twitter:description" content="My artistic universe is woven from multiple cultures. I enjoy telling stories through my illustrations and bringing imaginary characters to life.">
+    <meta property="twitter:image" content="https://illustrasea.com/assets/images/logo.png">
+
+    <title>Irina Dufaud - Illustrator</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <!-- Preload critical font -->
+    <link rel="preload" href="assets/fonts/thegirlnextdoor-808ebfea.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header Section with Logo and Portrait -->
-    <section class="header-section">
+    <header class="header-section">
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo-wrapper">
@@ -26,10 +55,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
         <div class="hero-content">
             <h1 class="hero-title">My artistic universe is woven from multiple cultures.</h1>
             <h1 class="hero-title">I enjoy telling stories through my illustrations and bringing imaginary characters to life.</h1>
@@ -57,7 +88,7 @@
                 </div>
             </div>
 
-            <!-- Gallery Section -->
+            <!-- Gallery Section - Children's Illustrations -->
             <div class="gallery" id="childrens-illustration">
                 <div class="gallery-grid">
                     <div class="gallery-item">
@@ -96,7 +127,13 @@
                     <div class="gallery-item">
                         <img src="assets/images/illustration-irina-1.jpg" alt="Children Playing" loading="lazy">
                     </div>
-                    <div class="gallery-item" id="landscape-illustrations">
+                </div>
+            </div>
+
+            <!-- Gallery Section - Landscape Illustrations -->
+            <div class="gallery" id="landscape-illustrations">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
                         <img src="assets/images/illustration-irina-16.jpg" alt="Landscape Illustration" loading="lazy">
                     </div>
                     <div class="gallery-item">
@@ -124,6 +161,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox">

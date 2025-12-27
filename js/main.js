@@ -8,6 +8,11 @@ const lightboxClose = document.querySelector('.lightbox-close');
 const lightboxPrev = document.querySelector('.lightbox-prev');
 const lightboxNext = document.querySelector('.lightbox-next');
 
+// Check if all required elements exist
+if (!lightbox || !lightboxImage || !lightboxClose || !lightboxPrev || !lightboxNext) {
+    console.error('Lightbox: Required DOM elements not found');
+}
+
 // ========================================
 // Lightbox Functionality
 // ========================================
@@ -15,14 +20,18 @@ let currentImageIndex = 0;
 const images = Array.from(galleryItems);
 
 // Open lightbox
-galleryItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        currentImageIndex = index;
-        openLightbox(item.src, item.alt);
+if (galleryItems.length > 0) {
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentImageIndex = index;
+            openLightbox(item.src, item.alt);
+        });
     });
-});
+}
 
 function openLightbox(src, alt) {
+    if (!lightboxImage || !lightbox) return;
+
     lightboxImage.src = src;
     lightboxImage.alt = alt;
     lightbox.classList.add('active');
@@ -30,48 +39,58 @@ function openLightbox(src, alt) {
 }
 
 function closeLightbox() {
+    if (!lightbox) return;
+
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
 }
 
 // Close lightbox
-lightboxClose.addEventListener('click', closeLightbox);
+if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+}
 
 // Close on background click
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        closeLightbox();
-    }
-});
+if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+}
 
 // Close on Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+    if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
         closeLightbox();
     }
 });
 
 // Previous image
-lightboxPrev.addEventListener('click', () => {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    lightboxImage.src = images[currentImageIndex].src;
-    lightboxImage.alt = images[currentImageIndex].alt;
-});
+if (lightboxPrev && lightboxImage) {
+    lightboxPrev.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        lightboxImage.src = images[currentImageIndex].src;
+        lightboxImage.alt = images[currentImageIndex].alt;
+    });
+}
 
 // Next image
-lightboxNext.addEventListener('click', () => {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    lightboxImage.src = images[currentImageIndex].src;
-    lightboxImage.alt = images[currentImageIndex].alt;
-});
+if (lightboxNext && lightboxImage) {
+    lightboxNext.addEventListener('click', () => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        lightboxImage.src = images[currentImageIndex].src;
+        lightboxImage.alt = images[currentImageIndex].alt;
+    });
+}
 
 // Keyboard navigation in lightbox
 document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('active')) return;
+    if (!lightbox || !lightbox.classList.contains('active')) return;
 
-    if (e.key === 'ArrowLeft') {
+    if (e.key === 'ArrowLeft' && lightboxPrev) {
         lightboxPrev.click();
-    } else if (e.key === 'ArrowRight') {
+    } else if (e.key === 'ArrowRight' && lightboxNext) {
         lightboxNext.click();
     }
 });
@@ -127,18 +146,3 @@ document.querySelectorAll('.gallery-item img, .mockup-item img').forEach(img => 
     imageObserver.observe(img);
 });
 
-// ========================================
-// Prevent context menu on images (optional)
-// ========================================
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('contextmenu', (e) => {
-        // Uncomment to disable right-click on images
-        // e.preventDefault();
-    });
-});
-
-// ========================================
-// Console Welcome Message
-// ========================================
-console.log('%c✨ Irina Dufaud - Illustratrice ✨', 'font-size: 20px; font-weight: bold; color: #e7bd97;');
-console.log('%cWebsite designed and developed with love', 'font-size: 12px; color: #32373c;');
