@@ -1,12 +1,28 @@
 {
   "images": [
     {
+      "image": "/assets/images/mockup-noupa.jpg",
+      "alt": "livre"
+    },
+    {
+      "image": "/assets/images/post-noupa.jpg",
+      "alt": "cartes"
+    },
+    {
       "image": "assets/images/IMG_0229 (Moyenne).png",
       "alt": "noupa 1"
     },
     {
       "image": "assets/images/IMG_0230 (Moyenne).png",
       "alt": "noupa 2"
+    },
+    {
+      "image": "/assets/images/IMG_0231 (Moyenne).png",
+      "alt": "fille"
+    },
+    {
+      "image": "/assets/images/IMG_0234 (Moyenne).png",
+      "alt": "baleine"
     }
   ]
 }
