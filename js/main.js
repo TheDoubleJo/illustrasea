@@ -1,7 +1,61 @@
 // ========================================
+// Load Gallery Data from JSON
+// ========================================
+async function loadGalleryData() {
+    try {
+        // Charger les données des mockups
+        const mockupsResponse = await fetch('_data/mockups.json');
+        const mockupsData = await mockupsResponse.json();
+        renderMockups(mockupsData.mockups);
+
+        // Charger les données de la galerie enfants
+        const childrensResponse = await fetch('_data/childrens-gallery.json');
+        const childrensData = await childrensResponse.json();
+        renderGallery('childrens-illustration', childrensData.images);
+
+        // Charger les données de la galerie paysages
+        const landscapeResponse = await fetch('_data/landscape-gallery.json');
+        const landscapeData = await landscapeResponse.json();
+        renderGallery('landscape-illustrations', landscapeData.images);
+
+        // Initialiser la lightbox après avoir chargé toutes les images
+        initializeLightbox();
+    } catch (error) {
+        console.error('Erreur lors du chargement des données:', error);
+    }
+}
+
+// Générer le HTML pour les mockups
+function renderMockups(mockups) {
+    const mockupGrid = document.querySelector('.mockup-grid');
+    if (!mockupGrid) return;
+
+    mockupGrid.innerHTML = '';
+    mockups.forEach(mockup => {
+        const div = document.createElement('div');
+        div.className = 'mockup-item';
+        div.innerHTML = `<img src="${mockup.image}" alt="${mockup.alt}" loading="lazy">`;
+        mockupGrid.appendChild(div);
+    });
+}
+
+// Générer le HTML pour une galerie
+function renderGallery(galleryId, images) {
+    const gallery = document.querySelector(`#${galleryId} .gallery-grid`);
+    if (!gallery) return;
+
+    gallery.innerHTML = '';
+    images.forEach(image => {
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.innerHTML = `<img src="${image.image}" alt="${image.alt}" loading="lazy">`;
+        gallery.appendChild(div);
+    });
+}
+
+// ========================================
 // DOM Elements
 // ========================================
-const galleryItems = document.querySelectorAll('.gallery-item img, .mockup-item img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.querySelector('.lightbox-image');
 const lightboxClose = document.querySelector('.lightbox-close');
@@ -17,15 +71,38 @@ if (!lightbox || !lightboxImage || !lightboxClose || !lightboxPrev || !lightboxN
 // Lightbox Functionality
 // ========================================
 let currentImageIndex = 0;
-const images = Array.from(galleryItems);
+let images = [];
 
-// Open lightbox
-if (galleryItems.length > 0) {
-    galleryItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            currentImageIndex = index;
-            openLightbox(item.src, item.alt);
+// Initialize lightbox after loading images
+function initializeLightbox() {
+    const galleryItems = document.querySelectorAll('.gallery-item img, .mockup-item img');
+    images = Array.from(galleryItems);
+
+    if (galleryItems.length > 0) {
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentImageIndex = index;
+                openLightbox(item.src, item.alt);
+            });
         });
+    }
+
+    // Observe all gallery images for lazy loading
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.classList.add('fade-in');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+
+    document.querySelectorAll('.gallery-item img, .mockup-item img').forEach(img => {
+        imageObserver.observe(img);
     });
 }
 
@@ -126,23 +203,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
-// Lazy Loading Images with Intersection Observer
+// Initialize on Page Load
 // ========================================
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.classList.add('fade-in');
-            observer.unobserve(img);
-        }
-    });
-}, {
-    threshold: 0.1,
-    rootMargin: '50px'
-});
-
-// Observe all gallery images
-document.querySelectorAll('.gallery-item img, .mockup-item img').forEach(img => {
-    imageObserver.observe(img);
+document.addEventListener('DOMContentLoaded', () => {
+    loadGalleryData();
 });
 

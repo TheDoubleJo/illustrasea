@@ -1,0 +1,36 @@
+{
+  "images": [
+    {
+      "image": "assets/images/illustration-irina-16.jpg",
+      "alt": "Landscape Illustration"
+    },
+    {
+      "image": "assets/images/illustration-irina-2.jpg",
+      "alt": "Landscape Scene"
+    },
+    {
+      "image": "assets/images/illustration-irina-9.jpg",
+      "alt": "Nature Illustration"
+    },
+    {
+      "image": "assets/images/illustration-irina-17.jpg",
+      "alt": "Forest Scene"
+    },
+    {
+      "image": "assets/images/illustration-sans-titre-7.jpg",
+      "alt": "Illustration"
+    },
+    {
+      "image": "assets/images/vacances.jpg",
+      "alt": "Vacances"
+    },
+    {
+      "image": "assets/images/xplore-exams.jpg",
+      "alt": "Xplore Exams"
+    },
+    {
+      "image": "assets/images/zen.png",
+      "alt": "Zen"
+    }
+  ]
+}

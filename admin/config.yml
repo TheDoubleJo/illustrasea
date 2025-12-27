@@ -1,0 +1,64 @@
+backend:
+  name: github
+  repo: TheDoubleJo/illustrasea
+  branch: main
+
+# Dossier où seront stockées les images uploadées
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+# Collections éditables
+collections:
+  # Mockups de livres
+  - name: "mockups"
+    label: "Book Mockups"
+    files:
+      - label: "Book Mockups"
+        name: "mockups"
+        file: "_data/mockups.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - label: "Mockups"
+            name: "mockups"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description (Alt Text)", name: "alt", widget: "string" }
+
+  # Galerie illustrations enfants
+  - name: "childrens_gallery"
+    label: "Children's Illustrations"
+    files:
+      - label: "Children's Illustrations"
+        name: "childrens_gallery"
+        file: "_data/childrens-gallery.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description (Alt Text)", name: "alt", widget: "string" }
+
+  # Galerie paysages
+  - name: "landscape_gallery"
+    label: "Landscape Illustrations"
+    files:
+      - label: "Landscape Illustrations"
+        name: "landscape_gallery"
+        file: "_data/landscape-gallery.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description (Alt Text)", name: "alt", widget: "string" }

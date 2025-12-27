@@ -1,0 +1,20 @@
+{
+  "mockups": [
+    {
+      "image": "assets/images/mockup-noupa.jpg",
+      "alt": "Book Mockup - Noupa"
+    },
+    {
+      "image": "assets/images/post-noupa.jpg",
+      "alt": "Noupa Illustration"
+    },
+    {
+      "image": "assets/images/anna-mockup-3.png",
+      "alt": "Anna Mockup 3"
+    },
+    {
+      "image": "assets/images/anna-mockup-4.png",
+      "alt": "Anna Mockup 4"
+    }
+  ]
+}

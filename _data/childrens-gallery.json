@@ -1,0 +1,52 @@
+{
+  "images": [
+    {
+      "image": "assets/images/pink-house.jpg",
+      "alt": "Pink House Illustration"
+    },
+    {
+      "image": "assets/images/fox.jpg",
+      "alt": "Fox Illustration"
+    },
+    {
+      "image": "assets/images/fete-des-enfants.jpg",
+      "alt": "Fête des enfants"
+    },
+    {
+      "image": "assets/images/jeux-dhiver.jpg",
+      "alt": "Jeux d'hiver"
+    },
+    {
+      "image": "assets/images/sophia.jpg",
+      "alt": "Sophia"
+    },
+    {
+      "image": "assets/images/halloween.jpg",
+      "alt": "Halloween"
+    },
+    {
+      "image": "assets/images/illustration-irina-13.jpg",
+      "alt": "Children Illustration"
+    },
+    {
+      "image": "assets/images/illustration-jeunesse.png",
+      "alt": "Illustration Jeunesse"
+    },
+    {
+      "image": "assets/images/illustration-sans-titre-21.jpg",
+      "alt": "Illustration sans titre"
+    },
+    {
+      "image": "assets/images/illustration-irina-15.jpg",
+      "alt": "Children Scene"
+    },
+    {
+      "image": "assets/images/portail-aercheo.jpg",
+      "alt": "Portail Aercheo"
+    },
+    {
+      "image": "assets/images/illustration-irina-1.jpg",
+      "alt": "Children Playing"
+    }
+  ]
+}
