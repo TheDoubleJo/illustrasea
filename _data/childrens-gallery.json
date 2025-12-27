@@ -45,6 +45,10 @@
       "alt": "chemin"
     },
     {
+      "image": "/assets/images/illustration-irina-17.jpg",
+      "alt": "Zen"
+    },
+    {
       "image": "assets/images/illustration-irina-13.jpg",
       "alt": "Children Illustration"
     },
@@ -57,12 +61,8 @@
       "alt": "Children Scene"
     },
     {
-      "image": "assets/images/fox.jpg",
+      "image": "assets/images/IMG_0242 (Moyenne).png",
       "alt": "Fox Illustration"
-    },
-    {
-      "image": "assets/images/zen.png",
-      "alt": "Zen"
     }
   ]
 }
