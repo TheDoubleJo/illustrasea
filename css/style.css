@@ -271,8 +271,6 @@ ul {
 .featured-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .featured-grid .gallery-item img {
