@@ -5,10 +5,7 @@ backend:
 
 # Dossier où seront stockées les images uploadées
 media_folder: "assets/images"
-public_folder: "assets/images"
-# Force relative paths (no leading slash)
-site_url: ""
-base_url: ""
+# Note: public_folder est défini au niveau de chaque champ image pour éviter le slash initial
 
 # Collections éditables
 collections:
@@ -27,7 +24,11 @@ collections:
             widget: "list"
             summary: "{{fields.alt}}"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "assets/images"
+                public_folder: "assets/images"
               - { label: "Description (Alt Text)", name: "alt", widget: "string" }
 
   # Galerie illustrations enfants
@@ -45,7 +46,11 @@ collections:
             widget: "list"
             summary: "{{fields.alt}}"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "assets/images"
+                public_folder: "assets/images"
               - { label: "Description (Alt Text)", name: "alt", widget: "string" }
 
   # Galerie paysages
@@ -63,5 +68,9 @@ collections:
             widget: "list"
             summary: "{{fields.alt}}"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "assets/images"
+                public_folder: "assets/images"
               - { label: "Description (Alt Text)", name: "alt", widget: "string" }
