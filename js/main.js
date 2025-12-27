@@ -25,19 +25,6 @@ async function loadGalleryData() {
     }
 }
 
-// Générer le HTML pour les mockups
-function renderMockups(mockups) {
-    const mockupGrid = document.querySelector('.mockup-grid');
-    if (!mockupGrid) return;
-
-    mockupGrid.innerHTML = '';
-    mockups.forEach(mockup => {
-        const div = document.createElement('div');
-        div.className = 'mockup-item';
-        div.innerHTML = `<img src="${mockup.image}" alt="${mockup.alt}" loading="lazy">`;
-        mockupGrid.appendChild(div);
-    });
-}
 
 // Générer le HTML pour une galerie
 function renderGallery(galleryId, images) {

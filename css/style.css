@@ -217,18 +217,6 @@ ul {
     padding: 0 0 130px 0;
 }
 
-.mockups-section {
-    margin-bottom: var(--spacing-lg);
-}
-
-.mockup-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
-}
-
 .mockup-item {
     width: 50%;
     position: relative;
@@ -638,11 +626,7 @@ ul {
     .gallery-grid {
         gap: var(--spacing-xs);
     }
-
-    .mockup-grid {
-        gap: var(--spacing-md);
-    }
-
+    
     .social-link {
         width: 40px;
         height: 40px;
