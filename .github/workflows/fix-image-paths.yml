@@ -7,11 +7,20 @@ on:
     paths:
       - '_data/*.json'
 
+# Prevent multiple instances from running simultaneously
+concurrency:
+  group: fix-image-paths
+  cancel-in-progress: false
+
 jobs:
   fix-paths:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Wait for GitHub Pages to start
+        run: sleep 10
+
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
