@@ -185,6 +185,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
+// Email Copy to Clipboard
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const emailLink = document.querySelector('a[href^="mailto:"]');
+    if (emailLink) {
+        emailLink.addEventListener('click', async (e) => {
+            const email = emailLink.getAttribute('href').replace('mailto:', '');
+
+            try {
+                await navigator.clipboard.writeText(email);
+
+                // Create and show notification
+                const notification = document.createElement('div');
+                notification.textContent = 'Email copied to clipboard!';
+                notification.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--color-accent);
+                    color: var(--color-white);
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    z-index: 10000;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    animation: fadeIn 0.3s ease-out;
+                `;
+                document.body.appendChild(notification);
+
+                // Remove notification after 2 seconds
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    notification.style.transition = 'opacity 0.3s ease-out';
+                    setTimeout(() => notification.remove(), 300);
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy email:', err);
+            }
+        });
+    }
+});
+
+// ========================================
 // Initialize on Page Load
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
