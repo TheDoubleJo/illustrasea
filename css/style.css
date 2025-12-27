@@ -258,6 +258,10 @@ ul {
 /* ========================================
    Gallery
 ======================================== */
+.gallery {
+    margin-bottom: var(--spacing-xl);
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
