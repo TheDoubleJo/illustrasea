@@ -21,14 +21,6 @@
       "alt": "Fête des enfants"
     },
     {
-      "image": "assets/images/jeux-dhiver.jpg",
-      "alt": "Jeux d'hiver"
-    },
-    {
-      "image": "assets/images/halloween.jpg",
-      "alt": "Halloween"
-    },
-    {
       "image": "assets/images/xplore-exams.jpg",
       "alt": "Xplore Exams"
     },
@@ -39,6 +31,14 @@
     {
       "image": "assets/images/vacances.jpg",
       "alt": "Vacances"
+    },
+    {
+      "image": "assets/images/IMG_0241.png",
+      "alt": "atelier"
+    },
+    {
+      "image": "assets/images/IMG_0232 (Moyenne).png",
+      "alt": "feu"
     },
     {
       "image": "assets/images/IMG_0237 (Moyenne).png",
@@ -69,16 +69,8 @@
       "alt": "Nature Illustration"
     },
     {
-      "image": "assets/images/IMG_0232 (Moyenne).png",
-      "alt": "feu"
-    },
-    {
       "image": "assets/images/zen.png",
       "alt": "Zen"
-    },
-    {
-      "image": "assets/images/IMG_0241.png",
-      "alt": "atelier"
     }
   ]
 }
