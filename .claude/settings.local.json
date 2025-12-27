@@ -6,7 +6,8 @@
       "Bash(curl:*)",
       "Bash(dir:*)",
       "Bash(tree:*)",
-      "WebFetch(domain:localhost)"
+      "WebFetch(domain:localhost)",
+      "Bash(findstr:*)"
     ]
   }
 }
