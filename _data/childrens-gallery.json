@@ -9,26 +9,6 @@
       "alt": "Fox Illustration"
     },
     {
-      "image": "assets/images/fete-des-enfants.jpg",
-      "alt": "Fête des enfants"
-    },
-    {
-      "image": "assets/images/jeux-dhiver.jpg",
-      "alt": "Jeux d'hiver"
-    },
-    {
-      "image": "assets/images/sophia.jpg",
-      "alt": "Sophia"
-    },
-    {
-      "image": "assets/images/halloween.jpg",
-      "alt": "Halloween"
-    },
-    {
-      "image": "assets/images/illustration-irina-13.jpg",
-      "alt": "Children Illustration"
-    },
-    {
       "image": "assets/images/illustration-jeunesse.png",
       "alt": "Illustration Jeunesse"
     },
@@ -37,72 +17,64 @@
       "alt": "Illustration sans titre"
     },
     {
-      "image": "assets/images/IMG_0239 (Petite).gif",
-      "alt": "Children Scene"
+      "image": "assets/images/fete-des-enfants.jpg",
+      "alt": "Fête des enfants"
     },
     {
-      "image": "assets/images/portail-aercheo.jpg",
-      "alt": "Portail Aercheo"
+      "image": "assets/images/jeux-dhiver.jpg",
+      "alt": "Jeux d'hiver"
     },
     {
-      "image": "assets/images/illustration-irina-1.jpg",
-      "alt": "Children Playing"
-    },
-    {
-      "image": "assets/images/illustration-irina-16.jpg",
-      "alt": "Landscape Illustration"
-    },
-    {
-      "image": "assets/images/illustration-irina-2.jpg",
-      "alt": "Landscape Scene"
-    },
-    {
-      "image": "assets/images/illustration-irina-9.jpg",
-      "alt": "Nature Illustration"
-    },
-    {
-      "image": "assets/images/illustration-irina-17.jpg",
-      "alt": "Forest Scene"
-    },
-    {
-      "image": "assets/images/illustration-sans-titre-7.jpg",
-      "alt": "Illustration"
-    },
-    {
-      "image": "assets/images/vacances.jpg",
-      "alt": "Vacances"
+      "image": "assets/images/halloween.jpg",
+      "alt": "Halloween"
     },
     {
       "image": "assets/images/xplore-exams.jpg",
       "alt": "Xplore Exams"
     },
     {
-      "image": "assets/images/zen.png",
-      "alt": "Zen"
+      "image": "assets/images/portail-aercheo.jpg",
+      "alt": "Portail Aercheo"
     },
     {
-      "image": "assets/images/IMG_0238 (Moyenne).png",
-      "alt": "squirels"
+      "image": "assets/images/vacances.jpg",
+      "alt": "Vacances"
     },
     {
-      "image": "assets/images/IMG_0231 (Moyenne).png",
-      "alt": "fille"
-    },
-    {
-      "image": "assets/images/IMG_0232 (Moyenne).png",
-      "alt": "feu"
-    },
-    {
-      "image": "assets/images/IMG_0234 (Moyenne).png",
-      "alt": "baleine"
+      "image": "assets/images/IMG_0237 (Moyenne).png",
+      "alt": "chateau"
     },
     {
       "image": "assets/images/IMG_0235 (Moyenne).png",
       "alt": "chemin"
     },
     {
-      "image": "assets/images/IMG_0237 (Moyenne).png",
-      "alt": "chateau"
+      "image": "assets/images/illustration-irina-13.jpg",
+      "alt": "Children Illustration"
+    },
+    {
+      "image": "assets/images/IMG_0238 (Moyenne).png",
+      "alt": "squirels"
+    },
+    {
+      "image": "assets/images/IMG_0239 (Petite).gif",
+      "alt": "Children Scene"
+    },
+    {
+      "image": "assets/images/illustration-irina-1.jpg",
+      "alt": "Children Playing"
+    },
+    {
+      "image": "assets/images/illustration-irina-9.jpg",
+      "alt": "Nature Illustration"
+    },
+    {
+      "image": "assets/images/IMG_0232 (Moyenne).png",
+      "alt": "feu"
+    },
+    {
+      "image": "assets/images/zen.png",
+      "alt": "Zen"
     }
   ]
 }
