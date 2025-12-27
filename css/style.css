@@ -159,7 +159,7 @@ ul {
     width: auto;
 }
 
-.forest-bg {
+.fond-bg {
     display: block;
     width: 100%;
     height: auto;
@@ -544,7 +544,7 @@ ul {
         max-width: 90%;
     }
 
-    .forest-bg {
+    .fond-bg {
         max-width: 100%;
         width: 100%;
         height: auto;
