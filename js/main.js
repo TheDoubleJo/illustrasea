@@ -3,11 +3,6 @@
 // ========================================
 async function loadGalleryData() {
     try {
-        // Charger les données des mockups
-        const mockupsResponse = await fetch('_data/mockups.json');
-        const mockupsData = await mockupsResponse.json();
-        renderMockups(mockupsData.mockups);
-
         // Charger les données de la galerie enfants
         const childrensResponse = await fetch('_data/childrens-gallery.json');
         const childrensData = await childrensResponse.json();
