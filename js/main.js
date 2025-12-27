@@ -13,6 +13,11 @@ async function loadGalleryData() {
         const landscapeData = await landscapeResponse.json();
         renderGallery('landscape-illustrations', landscapeData.images);
 
+        // Charger les données de la galerie featured works
+        const featuredResponse = await fetch('_data/featured-works-gallery.json');
+        const featuredData = await featuredResponse.json();
+        renderGallery('featured-works', featuredData.images);
+
         // Initialiser la lightbox après avoir chargé toutes les images
         initializeLightbox();
     } catch (error) {

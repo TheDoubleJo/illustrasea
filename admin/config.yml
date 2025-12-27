@@ -52,3 +52,25 @@ collections:
                 media_folder: "assets/images"
                 public_folder: "assets/images"
               - { label: "Description (Alt Text)", name: "alt", widget: "string" }
+
+  # Galerie Featured Works (Single Column)
+  - name: "featured_gallery"
+    label: "Featured Works"
+    files:
+      - label: "Featured Works"
+        name: "featured_gallery"
+        file: "_data/featured-works-gallery.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_folder: "assets/images"
+                public_folder: "assets/images"
+              - { label: "Description (Alt Text)", name: "alt", widget: "string" }

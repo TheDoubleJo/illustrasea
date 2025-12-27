@@ -267,6 +267,19 @@ ul {
     aspect-ratio: 3 / 4;
 }
 
+/* Featured Gallery - Single column layout */
+.featured-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.featured-grid .gallery-item img {
+    aspect-ratio: auto;
+    width: 100%;
+}
+
 /* Fade-in animation class for lazy loading */
 .fade-in {
     animation: fadeIn 0.6s ease-out;
