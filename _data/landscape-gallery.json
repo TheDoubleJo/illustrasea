@@ -23,6 +23,14 @@
     {
       "image": "assets/images/IMG_0234 (Moyenne).png",
       "alt": "baleine"
+    },
+    {
+      "image": "/assets/images/anna-mockup-3.png",
+      "alt": "Anna1"
+    },
+    {
+      "image": "/assets/images/anna-mockup-4.png",
+      "alt": "Anna2"
     }
   ]
 }
