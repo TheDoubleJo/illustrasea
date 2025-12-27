@@ -1,12 +1,12 @@
 {
   "images": [
     {
-      "image": "assets/images/pink-house.jpg",
-      "alt": "Pink House Illustration"
+      "image": "assets/images/IMG_0241.png",
+      "alt": "atelier"
     },
     {
-      "image": "assets/images/fox.jpg",
-      "alt": "Fox Illustration"
+      "image": "assets/images/pink-house.jpg",
+      "alt": "Pink House Illustration"
     },
     {
       "image": "assets/images/illustration-jeunesse.png",
@@ -33,10 +33,6 @@
       "alt": "Vacances"
     },
     {
-      "image": "assets/images/IMG_0241.png",
-      "alt": "atelier"
-    },
-    {
       "image": "assets/images/IMG_0232 (Moyenne).png",
       "alt": "feu"
     },
@@ -61,8 +57,8 @@
       "alt": "Children Scene"
     },
     {
-      "image": "assets/images/illustration-irina-1.jpg",
-      "alt": "Children Playing"
+      "image": "assets/images/fox.jpg",
+      "alt": "Fox Illustration"
     },
     {
       "image": "assets/images/illustration-irina-9.jpg",
