@@ -9,28 +9,6 @@ media_folder: "assets/images"
 
 # Collections éditables
 collections:
-  # Mockups de livres
-  - name: "mockups"
-    label: "Book Mockups"
-    files:
-      - label: "Book Mockups"
-        name: "mockups"
-        file: "_data/mockups.json"
-        extension: "json"
-        format: "json"
-        fields:
-          - label: "Mockups"
-            name: "mockups"
-            widget: "list"
-            summary: "{{fields.alt}}"
-            fields:
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                media_folder: "assets/images"
-                public_folder: "assets/images"
-              - { label: "Description (Alt Text)", name: "alt", widget: "string" }
-
   # Galerie illustrations enfants
   - name: "childrens_gallery"
     label: "Children's Illustrations"

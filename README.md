@@ -128,10 +128,10 @@ gh api repos/votre-username/illustrasea/pages -X POST -f source[branch]=main -f 
 
 ## Assets
 
-Le projet contient 25 images :
+Le projet contient 26 images :
 - 1 logo
-- 4 mockups de livres (Noupa, Anna)
-- 20 illustrations de portfolio
+- 19 illustrations pour enfants (Children's illustrations)
+- 6 illustrations de paysages (Landscape illustrations)
 
 Toutes les images sont hébergées localement dans `assets/images/`.
 

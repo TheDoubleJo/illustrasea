@@ -217,32 +217,6 @@ ul {
     padding: 0 0 130px 0;
 }
 
-.mockup-item {
-    width: 50%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.mockup-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.mockup-item img {
-    width: 100%;
-    height: auto;
-    transition: var(--transition);
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-}
-
-.mockup-item:hover img {
-    transform: scale(1.05);
-}
-
 /* ========================================
    Gallery
 ======================================== */
@@ -283,7 +257,7 @@ ul {
     transform: scale(1.1);
 }
 
-/* Landscape Gallery - 2 columns with same aspect ratio as mockups */
+/* Landscape Gallery - 2 columns with 3:4 aspect ratio */
 .landscape-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
@@ -429,10 +403,6 @@ ul {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
-    .mockup-item {
-        width: 70%;
-    }
-
     .main-logo {
         max-width: 300px;
     }
@@ -491,10 +461,6 @@ ul {
 
     .landscape-grid {
         gap: var(--spacing-md);
-    }
-
-    .mockup-item {
-        width: 100%;
     }
 }
 
@@ -567,10 +533,6 @@ ul {
     .landscape-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
-    }
-
-    .mockup-item {
-        width: 100%;
     }
 
     .lightbox-image {
@@ -661,8 +623,7 @@ ul {
     }
 }
 
-.gallery-item,
-.mockup-item {
+.gallery-item {
     animation: fadeIn 0.6s ease-out;
 }
 

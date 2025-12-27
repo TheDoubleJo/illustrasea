@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static portfolio website for Irina Dufaud, an illustrator. The site is a reproduction of illustrasea.com built with vanilla HTML, CSS, and JavaScript for deployment on GitHub Pages. The project showcases 25 images (1 logo, 4 book mockups, 20 illustrations) with a fully responsive design and interactive features.
+This is a static portfolio website for Irina Dufaud, an illustrator. The site is a reproduction of illustrasea.com built with vanilla HTML, CSS, and JavaScript for deployment on GitHub Pages. The project showcases 25 gallery images (19 children's illustrations, 6 landscape illustrations) with a fully responsive design and interactive features.
 
 ## Development Commands
 
@@ -45,7 +45,7 @@ illustrasea/
 ├── js/main.js             # Vanilla JS for all interactions
 ├── assets/
 │   ├── fonts/             # Custom font: "The Girl Next Door"
-│   └── images/            # 25 total images (logo + mockups + gallery)
+│   └── images/            # Gallery images and assets
 └── .nojekyll              # Required for GitHub Pages
 ```
 
@@ -61,7 +61,7 @@ illustrasea/
 - Four responsive breakpoints with specific grid layouts
 
 **JavaScript Modules** (in js/main.js):
-1. **Lightbox system**: Click any gallery/mockup image to open fullscreen viewer with prev/next navigation
+1. **Lightbox system**: Click any gallery image to open fullscreen viewer with prev/next navigation
 2. **Keyboard handlers**: Arrow keys (lightbox navigation), Esc (close lightbox)
 3. **Smooth scroll**: Anchor links scroll smoothly
 4. **Scroll-to-top button**: Appears after 300px scroll
@@ -113,7 +113,7 @@ This is a purely static site - no backend, no build process, no package.json. Al
 Edit CSS variables in `:root` first rather than hardcoding values. This maintains consistency across the site.
 
 ### When Modifying JavaScript
-All interactive features are in js/main.js organized by functionality with clear comment headers. The lightbox system depends on specific class names (.gallery-item img, .mockup-item img).
+All interactive features are in js/main.js organized by functionality with clear comment headers. The lightbox system depends on specific class names (.gallery-item img).
 
 ### Cross-Browser Testing
 Test on Chrome, Firefox, Safari. The site targets modern browsers (Chrome 90+, Firefox 88+, Safari 14+) and uses modern CSS (Grid, Flexbox, CSS Variables).

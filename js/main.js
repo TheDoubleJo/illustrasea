@@ -57,7 +57,7 @@ let images = [];
 
 // Initialize lightbox after loading images
 function initializeLightbox() {
-    const galleryItems = document.querySelectorAll('.gallery-item img, .mockup-item img');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
     images = Array.from(galleryItems);
 
     if (galleryItems.length > 0) {
@@ -83,7 +83,7 @@ function initializeLightbox() {
         rootMargin: '50px'
     });
 
-    document.querySelectorAll('.gallery-item img, .mockup-item img').forEach(img => {
+    document.querySelectorAll('.gallery-item img').forEach(img => {
         imageObserver.observe(img);
     });
 }
