@@ -9,13 +9,13 @@ media_folder: "assets/images"
 
 # Collections éditables
 collections:
-  # Galerie illustrations enfants
-  - name: "childrens_gallery"
-    label: "Children's Illustrations"
+  # Galerie paysages
+  - name: "landscape_gallery"
+    label: "Landscape Illustrations"
     files:
-      - label: "Children's Illustrations"
-        name: "childrens_gallery"
-        file: "_data/childrens-gallery.json"
+      - label: "Landscape Illustrations"
+        name: "landscape_gallery"
+        file: "_data/landscape-gallery.json"
         extension: "json"
         format: "json"
         fields:
@@ -30,14 +30,14 @@ collections:
                 media_folder: "assets/images"
                 public_folder: "assets/images"
               - { label: "Description (Alt Text)", name: "alt", widget: "string" }
-
-  # Galerie paysages
-  - name: "landscape_gallery"
-    label: "Landscape Illustrations"
+              
+  # Galerie illustrations enfants
+  - name: "childrens_gallery"
+    label: "Children's Illustrations"
     files:
-      - label: "Landscape Illustrations"
-        name: "landscape_gallery"
-        file: "_data/landscape-gallery.json"
+      - label: "Children's Illustrations"
+        name: "childrens_gallery"
+        file: "_data/childrens-gallery.json"
         extension: "json"
         format: "json"
         fields:
