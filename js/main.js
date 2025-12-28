@@ -236,9 +236,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
+// Fix iOS positioning issue for floating images
+// ========================================
+function fixFloatingImagePosition() {
+    const fondImg = document.querySelector('.fond-bg');
+    const loupImg = document.querySelector('.floating-illustration');
+
+    if (fondImg && loupImg) {
+        // Force reflow after image loads (especially for iOS Safari)
+        const forceReflow = () => {
+            const wrapper = fondImg.closest('.floating-images-wrapper');
+            if (wrapper) {
+                // Trigger reflow by reading offsetHeight
+                void wrapper.offsetHeight;
+                // Force repaint
+                loupImg.style.display = 'none';
+                void loupImg.offsetHeight;
+                loupImg.style.display = '';
+            }
+        };
+
+        // Wait for both images to load
+        if (fondImg.complete && fondImg.naturalHeight !== 0) {
+            // Image already loaded (cached)
+            forceReflow();
+        } else {
+            // Image not loaded yet
+            fondImg.addEventListener('load', forceReflow);
+        }
+    }
+}
+
+// ========================================
 // Initialize on Page Load
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     loadGalleryData();
+    fixFloatingImagePosition();
 });
 

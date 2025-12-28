@@ -502,9 +502,7 @@ ul {
     .floating-images-wrapper {
         position: relative;
         transform: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         margin: 0 auto;
         max-width: 90%;
     }
@@ -513,6 +511,7 @@ ul {
         max-width: 100%;
         width: 100%;
         height: auto;
+        display: block;
         /* Reserve space to prevent layout shift - 2048x1818 ratio */
         aspect-ratio: 2048 / 1818;
     }
