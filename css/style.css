@@ -513,6 +513,8 @@ ul {
         max-width: 100%;
         width: 100%;
         height: auto;
+        /* Reserve space to prevent layout shift - 2048x1818 ratio */
+        aspect-ratio: 2048 / 1818;
     }
 
     .floating-illustration {
